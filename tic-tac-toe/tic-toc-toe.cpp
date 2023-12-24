@@ -78,7 +78,6 @@ char askYesNo(string question)
 	} while (response != 'y' && response != 'n');
 	return response;
 }
-
 // Функция запрашивает у пользователя число из определенного диапазона и продолжает задавать вопрос, 
 // пока пользователь не введет соответствующее диапазону число
 int askNumper(string question, int high, int low)
@@ -119,7 +118,6 @@ char opponent(char piece)
 		return X;
 	}
 }
-
 // Функция отображает переданное игровое поле
 void displayBoard(const vector<char>& board)
 {
@@ -130,7 +128,6 @@ void displayBoard(const vector<char>& board)
 	cout << "\n\t" << board[6] << " | " << board[7] << " | " << board[8];
 	cout << "\n\n";
 }
-
 // Функция получения игрового поля и возврата победителя
 char winner(const vector<char>& board)
 {
@@ -152,9 +149,7 @@ char winner(const vector<char>& board)
 		{
 			return board[WINNING_ROWS[row][0]]; 
 		}
-		
 	}
-		
 	// поскольку победитель не определился, проверяем, не наступила ли ничья
 	// (сотались ли на поле пустые клетки)
 	if (count(board.begin(), board.end(), EMPTY) == 0)
@@ -184,9 +179,7 @@ int humanMove(const vector<char>& board, char human)
 	cout << " Fine...\n";
 	return move;
 }
-
 //Получаем игровое поле и ту фигуру, которой ходит компьютер
-
 int computerMove(vector<char> board, char computer)
 {
 	unsigned int move = 0;
@@ -241,14 +234,10 @@ int computerMove(vector<char> board, char computer)
 				++i;
 			}
 	}
-
 	cout << "I shall take square number " << move << endl;
 	return move;
-
 }
-
 //Получаем победителя игры
-
 void annonceWinner(char winner, char computer, char human)
 {
 	if (winner == computer)
