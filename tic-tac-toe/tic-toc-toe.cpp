@@ -91,7 +91,7 @@ int askNumper(string question, int high, int low)
 	} while (number > high || number < low);
 	return number;
 }
-// Спрашивает у пользхователя, хочет ли он ходить первым
+// Спрашивает у пользователя, хочет ли он ходить первым
 char humanPiece()
 {
 	char go_first = askYesNo("Do you require the first move?");
@@ -205,7 +205,7 @@ int computerMove(vector<char> board, char computer)
 			++move;
 		}
 	}
-	//иначе если человек может победить следующзим ходом, блокировать этот ход
+	//иначе если человек может победить следующим ходом, блокировать этот ход
 	if (!found)
 	{
 		move = 0;
